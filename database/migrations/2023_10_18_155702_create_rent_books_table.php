@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 			$table->unsignedBigInteger('user_id');
 			$table->unsignedBigInteger('book_id');
-			$table->boolean('is_taken')->default();
+			$table->boolean('is_taken')->default(0);
 			$table->timestamp('created_at')->nullable();
 			$table->timestamp('updated_at')->nullable();
 			$table->foreign('user_id')->references('id')->on('users');

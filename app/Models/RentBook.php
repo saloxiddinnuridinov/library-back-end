@@ -10,7 +10,7 @@ class RentBook extends Model
     use HasFactory;
 
     protected $fillable = [
-        
+
 	'id',
 	'user_id',
 	'book_id',
@@ -20,4 +20,14 @@ class RentBook extends Model
 	'created_at',
 	'updated_at',
     ];
+
+    public function books()
+    {
+        return $this->belongsTo(Book::class,'id');
+    }
+
+    public function users()
+    {
+        return $this->belongsTo(User::class,'id');
+    }
 }

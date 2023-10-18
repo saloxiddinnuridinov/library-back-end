@@ -25,3 +25,11 @@ Route::apiResource('rent_book', \App\Http\Controllers\API\V1\RentBookController:
 
 Route::post('login', [\App\Http\Controllers\API\V1\AuthController::class, 'loginEmail']);
 Route::get('get-book', [\App\Http\Controllers\API\V1\OrderContoller::class, 'getBook']);
+Route::get('get-book/{id}', [\App\Http\Controllers\API\V1\OrderContoller::class, 'show']);
+Route::get('read-book', [\App\Http\Controllers\API\V1\OrderContoller::class, 'readBook']);
+Route::get('existing-book', [\App\Http\Controllers\API\V1\OrderContoller::class, 'existingBook']);
+
+
+
+Route::get('get-student', [\App\Http\Controllers\API\V1\Admin\StudentController::class, 'index']);
+

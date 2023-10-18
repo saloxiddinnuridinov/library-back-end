@@ -16,6 +16,7 @@ class BookFactory extends Factory
 			'name' => $this->faker->word,
             'image' => 'https://clipart-library.com/2023/Black_Book_PNG_Clipart-1048.png',
 			'status' => 'open',
+            'book_count' => 50,
 			'description' => $this->faker->sentence,
 
 

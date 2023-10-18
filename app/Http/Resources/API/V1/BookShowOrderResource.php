@@ -4,7 +4,7 @@ namespace App\Http\Resources\API\V1;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class BookOrderResource extends JsonResource
+class BookShowOrderResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -20,6 +20,7 @@ class BookOrderResource extends JsonResource
             'name' => $this->name,
             'status' => $this->status,
             'description' => $this->description,
+            'book_count' => $this->book_count,
         ];
     }
 }

@@ -6,6 +6,42 @@
         "version": "1.0.0"
     },
     "paths": {
+        "/api/v1/get-student": {
+            "get": {
+                "tags": [
+                    "Admin API"
+                ],
+                "description": "Retrieve all Student",
+                "operationId": "83d588eb192c41015307fd6e9426b3b6",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Order"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "api": []
+                    }
+                ]
+            }
+        },
         "/api/v1/login": {
             "post": {
                 "tags": [
@@ -1245,6 +1281,126 @@
                 ],
                 "description": "Retrieve all Student",
                 "operationId": "dbc91c050db14d7078b6ae410649f344",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Order"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "api": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/get-book/{id}": {
+            "get": {
+                "tags": [
+                    "Student API"
+                ],
+                "summary": "Get a single Book by ID",
+                "description": "Retrieve a single Book by its ID",
+                "operationId": "4e1618d3cc65ddee29072ee79d4212ee",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the Book to retrieve",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Order"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "api": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/read-book": {
+            "get": {
+                "tags": [
+                    "Student API"
+                ],
+                "description": "Retrieve all Student",
+                "operationId": "49c0a864690e0755c5d71babd45b9eba",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Order"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "api": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/existing-book": {
+            "get": {
+                "tags": [
+                    "Student API"
+                ],
+                "description": "Retrieve all Student",
+                "operationId": "5753fc99fe5147db941e032971bb2d2f",
                 "responses": {
                     "200": {
                         "description": "Successful operation",

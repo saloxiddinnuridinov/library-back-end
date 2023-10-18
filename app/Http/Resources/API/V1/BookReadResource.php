@@ -4,7 +4,7 @@ namespace App\Http\Resources\API\V1;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class BookOrderResource extends JsonResource
+class BookReadResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,10 +16,9 @@ class BookOrderResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'image' => $this->image,
-            'name' => $this->name,
-            'status' => $this->status,
-            'description' => $this->description,
+            'book' => $this->books,
+            'is_taken' => boolval($this->is_taken),
+            'created' => date('Y-m-d H:i:s', strtotime($this->created_at)),
         ];
     }
 }
