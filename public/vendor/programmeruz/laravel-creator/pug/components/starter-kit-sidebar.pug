@@ -1,0 +1,91 @@
+// Page Sidebar Start
+- var status_toggle = (sidebar_open ? undefined : 'checked');
+.sidebar-wrapper 
+  div
+    .logo-wrapper
+      a(href='index.html')
+        img.img-fluid.for-light(src='../assets/images/logo/small-logo.png', alt='')
+        img.img-fluid.for-dark(src='../assets/images/logo/small-white-logo.png', alt='')
+      .back-btn
+        i.fa.fa-angle-left
+     
+    .logo-icon-wrapper
+      a(href="index.html")
+        img.img-fluid(src='../assets/images/logo-icon.png', alt='')
+
+    nav.sidebar-main
+      .left-arrow#left-arrow
+        i(data-feather='arrow-left')
+      #sidebar-menu
+        ul.sidebar-links#simple-bar
+          li.back-btn
+            a(href="index.html")
+              img.img-fluid(src='../assets/images/logo-icon.png', alt='')
+            .mobile-back.text-end
+              span Back
+              i.fa.fa-angle-right.ps-2(aria-hidden='true')
+         
+          li.sidebar-list
+            a.sidebar-link.sidebar-title(href='../theme/index.html')
+              i(data-feather='home')
+              span Dashboard              
+       
+
+         
+          li.sidebar-list
+            a.sidebar-link.sidebar-title(href='#')
+              i(data-feather='anchor')
+              span Starter kit
+            ul.sidebar-submenu
+              li
+                a.submenu-title(href='#')
+                  | color version
+                  span.sub-arrow
+                    i.fa.fa-chevron-right
+                ul.nav-sub-childmenu.submenu-content
+                  li
+                    a(href='index.html') Layout Light
+                  li
+                    a(href='layout-dark.html') Layout Dark
+              li      
+                a.submenu-title(href='#')
+                  | Page layout
+                  span.sub-arrow
+                    i.fa.fa-chevron-right
+                ul.nav-sub-childmenu.submenu-content
+                  li
+                    a(href='boxed.html') Boxed
+                  li
+                    a(href='layout-rtl.html') RTL
+              li      
+                a.submenu-title(href='#')
+                  | Footers
+                  span.sub-arrow
+                    i.fa.fa-chevron-right
+                ul.nav-sub-childmenu.submenu-content
+                  li
+                    a(href='footer-light.html') Footer Light
+                  li
+                    a(href='footer-dark.html') Footer Dark
+                  li
+                    a(href='footer-fixed.html') Footer Fixed
+         
+          li.sidebar-list
+            a.sidebar-link.sidebar-title(href='http://support.pixelstrap.com/help-center', target='_blank')
+                i(data-feather='headphones')
+                span Raise Support
+          li.sidebar-list
+            a.sidebar-link.sidebar-title(href='../document/index.html', target='_blank')
+              i(data-feather='file-text')
+              span Documentation    
+      
+        .sidebar-img-section
+            .sidebar-img-content
+              img(src="../assets/images/side-bar.png", alt="").img-fluid                
+              h4 Need Help ?
+              a.txt(href="https://pixelstrap.freshdesk.com/support/home") Raise ticket at "support@pixelstrap.com"
+              a.btn.btn-secondary(href="https://themeforest.net/user/pixelstrap/portfolio") Buy Now
+    
+
+
+// Page Sidebar Ends

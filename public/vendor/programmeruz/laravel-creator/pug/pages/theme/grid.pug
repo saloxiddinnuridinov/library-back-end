@@ -1,0 +1,721 @@
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var sidebar               = true;
+- var scrollbar             = true;
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          .container-fluid
+            .page-title
+              .row
+                .col-12.col-sm-6
+                  h3
+                    | Grid
+
+                .col-12.col-sm-6
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html').home-item                                        
+                        i(data-feather="home")
+                    li.breadcrumb-item  Ui Kits
+                    li.breadcrumb-item.active Grid
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-sm-12
+                .card
+                  .card-header.pb-0
+                    h5 Grid Options
+                    span Bootstrap grid allows building an equal height flexbile blocks easily
+                  .card-body
+                    p
+                      | While Bootstrap uses 
+                      code em 
+                      | or 
+                      code rem 
+                      | for defining most sizes, 
+                      code px
+                      |  are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the 
+                      a(href='#') font size
+                      | .
+                    .table-responsive
+                      table.table.table-bordered.table-striped
+                        thead
+                          tr
+                            th
+                            th.text-center
+                              | Extra small
+                              br
+                              small &lt;576px
+                            th.text-center
+                              | Small
+                              br
+                              small ≥576px
+                            th.text-center
+                              | Medium
+                              br
+                              small ≥768px
+                            th.text-center
+                              | Large
+                              br
+                              small ≥992px
+                            th.text-center
+                              | Extra large
+                              br
+                              small ≥1200px
+                            th.text-center
+                              | Extra extra large
+                              br
+                              small.digits ≥1400px
+                        tbody
+                          tr
+                            th.text-nowrap(scope='row') Grid behavior
+                            td Horizontal at all times
+                            td(colspan='5') Collapsed to start, horizontal above breakpoints
+                          tr
+                            th.text-nowrap(scope='row') Max container width
+                            td None (auto)
+                            td 540px
+                            td 720px
+                            td 960px
+                            td 1140px
+                            td 1320px
+                          tr
+                            th.text-nowrap(scope='row') Class prefix
+                            td
+                              code .col-
+                            td
+                              code .col-sm-
+                            td
+                              code .col-md-
+                            td
+                              code .col-lg-
+                            td
+                              code .col-xl-
+                            td
+                              code .col-xxl-
+                          tr
+                            th.text-nowrap(scope='row') # of columns
+                            td(colspan='6') 12
+                          tr
+                            th.text-nowrap(scope='row') Gutter width
+                            td(colspan='6') 1.5rem (.75rem on left and right)
+                          tr
+                            th.text-nowrap(scope='row') Nestable
+                            td(colspan='6') Yes
+                          tr
+                            th.text-nowrap(scope='row') Offsets
+                            td(colspan='6') Yes
+                          tr
+                            th.text-nowrap(scope='row') Column ordering
+                            td(colspan='6') Yes
+              .col-sm-12
+                .card
+                  .card-header.pb-0
+                    h5 Grid Column
+                    
+                  .card-body
+                    .grid-showcase
+                      p
+                        | Using a single set of 
+                        code .col-md-*
+                        |  grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns within any 
+                        code .row
+                        | .
+                      .row
+                        .col-md-1.text-center
+                          span col-md-1
+                        .col-md-2.text-center
+                          span col-md-2
+                        .col-md-2.text-center
+                          span col-md-2
+                        .col-md-3.text-center
+                          span col-md-3
+                        .col-md-4.text-center
+                          span col-md-4
+                        .col-md-5.text-center
+                          span col-md-5
+                        .col-md-7.text-center
+                          span col-md-7
+                        .col-md-6.text-center
+                          span col-md-6
+                        .col-md-6.text-center
+                          span col-md-6
+                        .col-md-8.text-center
+                          span col-md-8
+                        .col-md-4.text-center
+                          span col-md-4
+                        .col-md-9.text-center
+                          span col-md-9
+                        .col-md-3.text-center
+                          span col-md-3
+                        .col-md-10.text-center
+                          span col-md-10
+                        .col-md-2.text-center
+                          span col-md-2
+                        .col-md-12.text-center
+                          span col-md-12
+                      
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head7', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre
+                          code.language-html#example-head7
+                            | &lt;!--  Grid Column Copy begin --&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col-md-1 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-1
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-2 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-2
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-2 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-2
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-3 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-3
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-4 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-4
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-5 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-5
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-7 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-7
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-6 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-6 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-8 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-4 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-9 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-9
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-3 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-3
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-10 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-10
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-2 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-2
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-12 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-12
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            | &lt;!--  Grid Column Copy end --&gt;
+              .col-sm-12
+                .card
+                  .card-header.pb-0
+                    h5 Row columns
+                   
+                  .card-body 
+                    .grid-showcase
+                      p
+                        | Use the responsive
+                        code .row-cols-*
+                        | classes to quickly set the number of columns that best render your content and layout. Whereas normal 
+                        code .col-*
+                        | classes apply to the individual columns (e.g., .col-md-4), the row columns classes are set on the parent 
+                        code .row
+                        | as a default for contained columns. With
+                        code .row-cols-auto
+                        | you can give the columns their natural width.
+                      .row.row-cols-2.row-cols-lg-3
+                        .col
+                          span col-lg-3
+                        .col
+                          span col-lg-3
+                        .col
+                          span col-lg-3
+                        .col
+                          span col-lg-3
+                        .col
+                          span col-lg-3
+                        .col
+                          span col-lg-3
+                        .col-4.col-lg-2
+                          span col-4 col-lg-2
+                        .col-4.col-lg-2
+                          span col-4 col-lg-2
+                        .col-4.col-lg-2
+                          span col-4 col-lg-2
+                        .col-4.col-lg-2
+                          span col-4 col-lg-2
+                        .col-4.col-lg-2
+                          span col-4 col-lg-2
+                        .col-4.col-lg-2
+                          span col-4 col-lg-2
+                      
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head2', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre
+                          code.language-html#example-head2
+                            | &lt;!--  Grid Column Copy begin --&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col-md-1 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-1
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-2 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-2
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-2 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-2
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-3 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-3
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-4 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-4
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-5 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-5
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-7 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-7
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-6 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-6 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-8 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-4 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-9 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-9
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-3 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-3
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-10 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-10
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-2 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-2
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-12 text-center"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-12
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            | &lt;!--  Grid Column Copy end --&gt;
+              
+              .col-sm-12
+                .card
+                  .card-header.pb-0
+                    h5 Vertical alignment
+                    
+                  .card-body 
+                    .grid-showcase.grid-align.pb-0
+                      p Use flexbox alignment utilities to vertically and horizontally align columns.
+                      .row
+                        .col.align-self-start
+                          span One of three columns
+                        .col.align-self-center
+                          span One of three columns
+                        .col.align-self-end
+                          span One of three columns
+                      .row.align-items-start
+                        .col
+                          span One of three columns
+                        .col
+                          span One of three columns
+                        .col
+                          span One of three columns
+                      .row.align-items-center
+                        .col
+                          span One of three columns
+                        .col
+                          span One of three columns
+                        .col
+                          span One of three columns
+                      .row.align-items-end
+                        .col
+                          span One of three columns
+                        .col
+                          span One of three columns
+                        .col
+                          span One of three columns
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head3', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre
+                          code.language-html#example-head3
+                            | &lt;!--  Vertical alignment Copy begin --&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col align-self-start"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col align-self-center"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col align-self-end"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            | &lt;div class="row align-self-start"&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            | &lt;div class="row align-self-center"&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            | &lt;div class="row align-self-end"&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;;
+                            | &lt;!--  Vertical alignment Copy end --&gt;
+              
+              .col-sm-12
+                .card
+                  .card-header.pb-0
+                    h5 Nesting Column
+                    
+                  .card-body 
+                    .grid-showcase
+                      p Use flexbox alignment utilities to vertically and horizontally align columns.
+                      .row
+                        .col-sm-9
+                          span Level 1: .col-sm-9
+                          .row
+                            .col-8.col-sm-6
+                              span Level 2: .col-8 .col-sm-6
+                            .col-4.col-sm-6
+                              span Level 2: .col-4 .col-sm-6
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head4', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre
+                          code.language-html#example-head4
+                            | &lt;!--  Nesting Column Copy begin --&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col-8 col-sm-6"&gt;
+                            |     &lt;span &gt;
+                            |        Level 2: col-8 col-sm-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-4 col-sm-6"&gt;
+                            |     &lt;span &gt;
+                            |        Level 2: .col-4 .col-sm-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |&lt;/div&gt;
+                            |&lt;!--  Nesting Column Copy end --&gt;
+              .col-sm-12
+                .card
+                  .card-header.pb-0
+                    h5 Order
+                    
+                  .card-body 
+                    .grid-showcase
+                      p
+                        | Use 
+                        code .order-
+                        |  classes for controlling the 
+                        strong visual order
+                        |  of your content. These classes are responsive, so you can set the 
+                        code order
+                        |  by breakpoint (e.g., 
+                        code .order-1.order-md-2
+                        | ). Includes support for 
+                        code 1
+                        |  through 
+                        code 12
+                        |  across all five grid tiers.
+                      .row
+                        .col
+                          span First, but unordered
+                        .col.order-12
+                          span Second, but last
+                        .col.order-1
+                          span Third, but first
+                      .row
+                        .col.order-last
+                          span First, but last
+                        .col
+                          span Second, but unordered
+                        .col.order-first
+                          span Third, but first
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head5', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre
+                          code.language-html#example-head5
+                            | &lt;!--  Order Copy begin --&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        First, but unordered
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col order-12"&gt;
+                            |     &lt;span &gt;
+                            |        Second, but last
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col order-1"&gt;
+                            |     &lt;span &gt;
+                            |        Third, but first
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col order-last"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col order-first"&gt;
+                            |     &lt;span &gt;
+                            |        One of three columns
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            |&lt;!--  Order Copy end --&gt;
+              .col-sm-12
+                .card
+                  .card-header.pb-0
+                    h5 Offset
+                      
+                  .card-body 
+                    .grid-showcase
+                      p
+                        | Move columns to the right using 
+                        code .offset-md-*
+                        |  classes. These classes increase the left margin of a column by 
+                        code *
+                        |  columns. For example, 
+                        code .offset-md-4
+                        |  moves 
+                        code .col-md-4
+                        |  over four columns.
+                      .row
+                        .col-md-4
+                          span .col-md-4
+                        .col-md-4.offset-md-4
+                          span .col-md-4 .offset-md-4
+                      .row
+                        .col-md-3.offset-md-3
+                          span .col-md-3 .offset-md-3
+                        .col-md-3.offset-md-3
+                          span .col-md-3 .offset-md-3
+                      .row
+                        .col-md-6.offset-md-3
+                          span .col-md-6 .offset-md-3
+                      .row
+                        .col-sm-5.col-md-6
+                          span .col-sm-5 .col-md-6
+                        .col-sm-5.offset-sm-2.col-md-6.offset-md-0
+                          span .col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0
+                      .row
+                        .col-sm-6.col-md-5.col-lg-6
+                          span .col-sm-6 .col-md-5 .col-lg-6
+                        .col-sm-6.col-md-5.offset-md-2.col-lg-6.offset-lg-0
+                          span .col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0
+                      .code-box-copy
+                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head6', title='Copy')
+                          i.icofont.icofont-copy-alt
+                        pre
+                          code.language-html#example-head6
+                            | &lt;!--  Offset Copy begin --&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col-md-4"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-4
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-4 offset-md-4"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-4 offset-md-4
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col-md-3 offset-md-3"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-3 offset-md-3
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-md-3 offset-md-3"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-3 offset-md-3
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col-md-6 offset-md-3"&gt;
+                            |     &lt;span &gt;
+                            |        col-md-6 offset-md-3
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col-sm-5 col-md-6"&gt;
+                            |     &lt;span &gt;
+                            |        col-sm-5 col-md-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0"&gt;
+                            |     &lt;span &gt;
+                            |        col-sm-5 offset-sm-2 col-md-6 offset-md-0
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            | &lt;div class="row"&gt;
+                            |   &lt;div class="col-sm-6 col-md-5 col-lg-6"&gt;
+                            |     &lt;span &gt;
+                            |        col-sm-6 col-md-5 col-lg-6
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            |   &lt;div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0"&gt;
+                            |     &lt;span &gt;
+                            |        col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0
+                            |     &lt;/span&gt;
+                            |   &lt;/div&gt;
+                            | &lt;/div&gt;
+                            |&lt;!--  Offset Copy end --&gt;
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

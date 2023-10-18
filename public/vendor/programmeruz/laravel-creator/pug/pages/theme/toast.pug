@@ -1,0 +1,121 @@
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var scrollbar             = true;
+- var custom_toast          = true; 
+- var popper                = true;
+- var height_equal          = true 
+
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          .container-fluid
+            .page-title
+              .row
+                .col-12.col-sm-6
+                  h3
+                    | Toasts
+                .col-12.col-sm-6
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html').home-item
+                        i(data-feather="home")
+                    li.breadcrumb-item Ui Kits
+                    li.breadcrumb-item.active Toasts
+          // Container-fluid starts
+          .container-fluid
+            .row.toast-section
+                
+                .col-12.col-xl-6.col-lg-6.col-md-6
+                     .card.live-toast.height-equal
+                        .card-header.pb-0 
+                            h5 Live toast 
+                        .card-body.position-relative
+                            button.btn.btn-primary( type="button")#liveToastBtn
+                                | Show live toast
+                            .position-fixed.bottom-0.end-0.p-3.dmo
+                                .toast.hide(role="alert" aria-live="assertive" aria-atomic="true")#liveToast
+                                    .toast-header
+                                        img(src="../assets/images/avtar/avatar-1.jpg", alt="").rounded.me-2.img-20
+                                        strong.me-auto emay walker
+                                        small 11 mins ago
+                                        button.btn-close(type="button" data-bs-dismiss="toast" aria-label="Close")
+                                    .toast-body
+                                        span Hello, world! This is a toast message.
+                .col-12.col-xl-6.col-lg-6.col-md-6
+                    .card.height-equal
+                        .card-header.pb-0 
+                            h5 Color schemes  
+                        .card-body 
+                            .toast.defaul-show-toast.align-items-center.text-white.bg-primary.position-relative( aria-live="assertive"  , data-bs-autohide="false", aria-atomic="false")
+                                .toast-body
+                                  | Hello, world! This is a toast message.   
+                                  button.btn-close.btn-close-white.position-absolute.top-50.end-0.translate-middle(type="button" data-bs-dismiss="toast" aria-label="Close")
+                .col-12.col-xl-6.col-lg-6.col-md-6 
+                    .card.height-equal-2
+                        .card-header.pb-0 
+                            h5 Custom content
+
+                        .card-body 
+                            .toast.defaul-show-toast( aria-live="assertive"  , data-bs-autohide="false", aria-atomic="false")
+                                .toast-header
+                                    img(src="../assets/images/avtar/avatar-1.jpg", alt="").rounded.me-2.img-20
+                                    strong.left emay walker
+                                    small 11 mins ago
+                                    button.btn-close(type="button" data-bs-dismiss="toast" aria-label="Close")
+                                .toast-body
+                                    span Hello, world! This is a toast message.
+                .col-12.col-xl-6.col-lg-6.col-md-6
+                    .card.height-equal-2
+                        .card-header.pb-0 
+                            h5  Custom content
+                        .card-body 
+                            .toast.defaul-show-toast( aria-live="assertive"  , data-bs-autohide="false", aria-atomic="false")
+                                
+                                .toast-body
+                                    span Hello, world! This is a toast message. 
+                                    .mt-2.pt-2.border-top
+                                      button.btn.btn-primary.btn-sm Take action
+                                      button.btn.btn-light.btn-sm(type="button" data-bs-dismiss="toast" aria-label="Close")  Close           
+                          
+                
+                
+                .col-sm-12
+                   .card.placement-toast
+                      .card-header.pb-0
+                          h5 Toast Placement
+                      .card-body
+                        form
+                          div.mb-3
+                            select.form-select.changeoption#selectToastPlacement
+                              option(value=""  selected) Select a position... 
+                              option(value="top-0 start-0" ) Top left
+                              option( value="top-0 start-50 translate-middle-x") Top center
+                              option(value="top-0 end-0") Top right
+                              option(value="top-50 start-0 translate-middle-y") Middle left
+                              option(value="top-50 start-50 translate-middle") Middle center
+                              option(value="top-50 end-0 translate-middle-y") Middle right
+                              option(value="bottom-0 start-0") Bottom left
+                              option(value="bottom-0 start-50 translate-middle-x") Bottom center
+                              option(value="bottom-0 end-0") Bottom right
+                        .position-relative.bd-example-toasts(aria-live="polite" aria-atomic="true")
+                          .toast-container.position-absolute.custom-toast-placement#toastPlacement
+                            .toast
+                              .toast-header
+                                img.rounded.me-2.img-20(src="../assets/images/avtar/avatar-1.jpg"  alt="...")
+                                strong.me-auto emay walker
+                                small 11 mins ago
+                              .toast-body 
+                                span  Hello, world! This is a toast message.
+                
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

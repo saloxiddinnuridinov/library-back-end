@@ -1,0 +1,499 @@
+- var chartjs               = true;
+- var chartist              = true;
+- var apex                  = true;
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var animate               = true;
+- var owlcarousel           = true;
+- var page_owlcarousel      = true;
+- var dashboard_2           = true;
+- var counter               = true;
+- var prism                 = true;
+- var sidebar               = true;
+- var scrollbar             = true;
+
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          .container-fluid
+            .page-title
+              .row
+                .col-12.col-sm-6
+                  h3 
+                    | Ecommerce
+
+                .col-12.col-sm-6
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html').home-item
+                        i(data-feather="home")
+                    li.breadcrumb-item Dashboard
+                    li.breadcrumb-item.active Ecommerce
+         
+         
+          // Container-fluid starts
+          .container-fluid.ecommerce-dash
+            .row
+              .col-xl-3.col-md-6.dash-xl-33.dash-lg-50
+                .card.sales-state
+                  .row.m-0
+                    .col-12.p-0 
+                      .card.bg-primary
+                        .card-header.card-no-border.bg-primary 
+                           .media.media-dashboard
+                            .media-body 
+                              h5.mb-0.text-light Sales Stats
+                            .icon-box
+                              i(data-feather="more-horizontal")
+                        .card-body.p-0
+                           #sales-state-chart
+                    .col-4.p-0
+                      .sales-small-chart
+                        .card-body.p-0.m-auto
+                            .sales-small.sales-small-1
+                            h6 300
+                            span Watch Sale  
+                                  
+                    .col-4.p-0
+                      .sales-small-chart
+                        .card-body.p-0.m-auto
+                            .sales-small.sales-small-2
+                            h6 1120
+                            span Phone Sale
+                    .col-4.p-0
+                     .sales-small-chart
+                        .card-body.p-0.m-auto
+                            .sales-small.sales-small-3
+                            h6 530
+                            span Tablet Sale 
+              .col-xl-5.col-md-6.dash-xl-33.dash-lg-50
+                .card.pb-0.invoice-overviwe                 
+                  .card-header.card-no-border
+                    .header-top
+                      h5.m-0 Invoice Overview
+                      .icon-box.onhover-dropdown
+                            i(data-feather="more-horizontal")
+                            .icon-box-show.onhover-show-div
+                              ul 
+                                li 
+                                  a  
+                                    | Today
+                                li 
+                                  a 
+                                    | Yesterday
+                                li  
+                                  a 
+                                    | Tommorow
+                  .card-body.pt-0
+                    #invoice-overviwe-chart
+              .col-xl-4.col-md-6.dash-lgorder-1.dash-xl-33.dash-lg-50
+                .card.hot-selling
+                  .card-header.card-no-border
+                    .header-top
+                      h5.m-0 Hot Selling Products
+                      .icon-box.onhover-dropdown
+                            i(data-feather="more-horizontal")
+                            .icon-box-show.onhover-show-div
+                              ul 
+                                li 
+                                  a  
+                                    | Today
+                                li 
+                                  a 
+                                    | Yesterday
+                                li  
+                                  a 
+                                    | Tommorow
+                  .card-body.pt-0
+                    .table-responsive         
+                      table.table.table-bordernone                           
+                        tbody 
+                          tr
+                            td
+                              .media
+                                img.img-fluid.me-3.b-r-5(src="../assets/images/dashboard-2/rectangle-26.png" alt="")
+                                .media-body
+                                  a(href="product-page.html")
+                                    h5 Dominoes Coffee Table Game
+                                  p 60k Sales
+                            td
+                              span.badge.badge-light-theme-light.font-theme-light $50
+                          tr
+                            td
+                              .media  
+                                img.img-fluid.me-3.b-r-5(src="../assets/images/dashboard-2/rectangle-27.png" alt="")
+                                .media-body
+                                  a(href="product-page.html")
+                                    h5 Photive Wireless speakers
+                                  p 35k Sales
+                                
+                            td
+                              span.badge.badge-light-theme-light.font-theme-light $25
+                          tr
+                            td
+                              .media
+                                img.img-fluid.me-3.b-r-5(src="../assets/images/dashboard-2/rectangle-28.png" alt="")
+                                .media-body
+                                  a(href="product-page.html")
+                                    h5 Urbanears Lotsen Speaker
+                                  p 53k Sales
+                            td
+                              span.badge.badge-light-theme-light.font-theme-light $30
+                          tr
+                            td
+                              .media
+                                img.img-fluid.me-3.b-r-5(src="../assets/images/dashboard-2/rectangle-29.png" alt="")
+                                .media-body
+                                  a(href="product-page.html")
+                                    h5 Plattan 2 Headphones
+                                  p 35k Sales
+                            td
+                              span.badge.badge-light-theme-light.font-theme-light $45                          
+              .col-xl-5.col-md-12.dash-xl-50.dash-lg-100.dash-39
+                .card.ongoing-project.recent-orders
+                  .card-header.card-no-border
+                    .media.media-dashboard
+                      .media-body 
+                        h5.mb-0 Recent Orders
+                      .icon-box.onhover-dropdown
+                        i(data-feather="more-horizontal")
+                        .icon-box-show.onhover-show-div
+                          ul 
+                            li 
+                              a  
+                                | Done
+                            li 
+                              a 
+                                | Pending
+                            li  
+                              a 
+                                | Rejected
+                            li 
+                              a
+                                | In Progress
+                  .card-body.pt-0
+                    .table-responsive
+                      table.table.table-bordernone
+                        thead 
+                            tr 
+                              th 
+                                span Product Name
+                              th 
+                                span Customer
+                              th 
+                                span Price                                     
+                              th 
+                                span Quantity
+                              th 
+                                span Status
+                        tbody 
+                          tr
+                            td
+                              .media
+                                .square-box.me-2
+                                  img.img-fluid.b-r-5(src="../assets/images/dashboard-2/running-shoe.png" alt="")
+                                .media-body.ps-2
+                                  .avatar-details
+                                    a(href="product-page.html")
+                                      h6 Nike Sports NK
+                                    span  Free delivery
+                            td.img-content-box
+                              h6 Harold More
+                              span UK Desig Team
+                            td
+                              h6 $99.85
+                              span Nok                                   
+                            td 
+                              h6 20
+                            td
+                              .badge.badge-light-primary Done
+                          tr
+                            td
+                              .media
+                                .square-box.me-2
+                                  img.img-fluid.b-r-5(src="../assets/images/dashboard-2/hand-bag.png" alt="")
+                                .media-body.ps-2
+                                  .avatar-details
+                                    a(href="product-page.html")
+                                      h6 Women Bag
+                                    span  ₹83.65 delivery
+                            td.img-content-box
+                              h6 Daniel Poller
+                              span UX Ninjas
+                            td
+                              h6 $79.99
+                              span Nok                                   
+                            td 
+                              h6 12
+                            td
+                              .badge.badge-light-secondary Pending
+                          tr
+                            td
+                              .media
+                                .square-box.me-2
+                                  img.img-fluid.b-r-5(src="../assets/images/dashboard-2/sun-glasses.png" alt="")
+                                .media-body.ps-2
+                                  .avatar-details
+                                    a(href="product-page.html")
+                                      h6 Sunglasses
+                                    span  Free delivery
+                            td.img-content-box
+                              h6 Frank Borker
+                              span SF Dev Team
+                            td
+                              h6 $59.20
+                              span Nok                                    
+                            td 
+                              h6 23
+                            td
+                              .badge.badge-light-danger Rejected
+                          tr
+                            td
+                              .media
+                                .square-box.me-2
+                                  img.img-fluid.b-r-5(src="../assets/images/dashboard-2/shirt.png" alt="")
+                                .media-body.ps-2
+                                  .avatar-details
+                                    a(href="product-page.html")
+                                      h6 Cotton T-shirt
+                                    span  ₹283.65 delivery
+                            td.img-content-box
+                              h6 Adam Moris
+                              span Moscow Office
+                            td
+                              h6 $49.99
+                              span Nok                                    
+                            td 
+                              h6 34
+
+                            td
+                              .badge.badge-light-info In Progress
+              .col-xl-4.col-md-6.dash-xl-50.dash-29
+                .card.our-activities
+                  .card-header.card-no-border
+                    .media.media-dashboard
+                      .media-body 
+                        h5.mb-0 Our Activities      
+                      .icon-box.onhover-dropdown
+                        i(data-feather="more-horizontal")
+                        .icon-box-show.onhover-show-div
+                          ul 
+                            li 
+                              a  
+                                | Latest 
+                            li 
+                              a 
+                                | Earlist
+                  .card-body.pt-0
+                    .table-responsive
+                        table.table.table-bordernone                           
+                          tbody 
+                            tr
+                              td
+                                .media
+                                  .icon-wrappar
+                                    i.fa.fa-trophy.font-primary                                     
+                                  .media-body
+                                    a(href="#")
+                                     h5 Win best seller of the year awaed 
+                                    p Company, San Francisco
+                              td
+                                span.badge.badge-light-theme-light.font-theme-light 1 day ago
+                            tr
+                              td
+                                .media
+                                  .icon-wrappar
+                                    i.fa.fa-check-circle.font-secondary                                    
+                                  .media-body
+                                    a(href="#")
+                                      h5 Apporved our product
+                                    p Elisse joson, San Francisco
+                              td
+                                span.badge.badge-light-theme-light.font-theme-light 2 weeks ago
+                            tr
+                              td
+                                .media
+                                  .icon-wrappar
+                                    i.fa.fa-bookmark.font-success                                     
+                                  .media-body
+                                    a(href="#")
+                                      h5 Win best seller of the year awaed 
+                                    p Company, San Francisco
+                              td
+                                span.badge.badge-light-theme-light.font-theme-light 3 day ago
+                            tr
+                              td
+                                .media
+                                  .icon-wrappar
+                                    i.fa.fa-shopping-basket.font-warning                                      
+                                  .media-body
+                                    a(href="#")
+                                      h5 Apporved our product in checking
+                                    p 35k Sales
+                              td
+                                span.badge.badge-light-theme-light.font-theme-light 2 hours ago
+              .col-xl-3.col-md-6.dash-xl-50.dash-32
+                .card.revenue-category
+                  .card-header.card-no-border
+                    .media
+                      .media-body 
+                        h5.mb-0 Revenue by Category
+                      .icon-box.onhover-dropdown
+                        i(data-feather="more-horizontal")
+                        .icon-box-show.onhover-show-div
+                          ul 
+                            li  
+                              a  
+                                | Done
+                            li 
+                              a 
+                                | Pending
+                  .card-body
+                    .donut-inner
+                      h5 16,349
+                      h6 2,174 in pending
+                    #revenue-chart             
+              .col-xl-5.col-md-6.dash-lgorder-1.dash-xl-50.dash-39
+                .card.special-discount
+                  .card-body
+                    .discount-slide.owl-carousel.owl-theme
+                      .item
+                        .row.discount-block 
+                          .col-xl-7.col-lg-12.dash-xl-100 
+                            .discount-detail
+                              div
+                                h5  Special Discount 
+                                  span.font-primary.f-w-500 70%OFF
+                                h3.m-auto Deal of the Day from 
+                                  span.font-primary $75
+                                 
+                                ul.timer-sec.countdown  
+                                  li
+                                    h6.font-primary.m-0.days 
+                                    span.font-dark Days 
+                                  li
+                                    h6.font-primary.m-0.hours 
+                                    span.font-dark Hours
+                                  li
+                                    h6.font-primary.m-0.minutes 
+                                    span.font-dark Min
+                                  li
+                                    h6.font-primary.m-0.seconds 
+                                    span.font-dark Sec
+                          .col-xl-5.col-lg-12.dash-xl-100
+                            .img-wrraper
+                              img.img-fluid(src='../assets/images/dashboard-2/image.png', alt='')
+                      .item
+                        .row.discount-block 
+                          .col-xl-7.col-lg-12.dash-xl-100 
+                            .discount-detail
+                              div
+                                h5  Special Discount 
+                                  span.font-primary.f-w-500 70%OFF
+                                h3.m-auto Deal of the Day from 
+                                  span.font-primary $75
+                                 
+                                ul.timer-sec.countdown  
+                                  li
+                                    h6.font-primary.m-0.days 
+                                    span.font-dark Days 
+                                  li
+                                    h6.font-primary.m-0.hours 
+                                    span.font-dark Hours
+                                  li
+                                    h6.font-primary.m-0.minutes 
+                                    span.font-dark Min
+                                  li
+                                    h6.font-primary.m-0.seconds 
+                                    span.font-dark Sec
+                          .col-xl-5.col-lg-12.dash-xl-100
+                            .img-wrraper
+                              img.img-fluid(src='../assets/images/dashboard-2/image.png', alt='')
+                      .item
+                          .row.discount-block 
+                            .col-xl-7.col-lg-12.dash-xl-100 
+                              .discount-detail
+                                div
+                                  h5  Special Discount 
+                                    span.font-primary.f-w-500 70%OFF
+                                  h3.m-auto Deal of the Day from 
+                                    span.font-primary $75
+                                   
+                                  ul.timer-sec.countdown  
+                                    li
+                                      h6.font-primary.m-0.days 
+                                      span.font-dark Days 
+                                    li
+                                      h6.font-primary.m-0.hours 
+                                      span.font-dark Hours
+                                    li
+                                      h6.font-primary.m-0.minutes 
+                                      span.font-dark Min
+                                    li
+                                      h6.font-primary.m-0.seconds 
+                                      span.font-dark Sec
+                            .col-xl-5.col-lg-12.dash-xl-100
+                              .img-wrraper
+                                img.img-fluid(src='../assets/images/dashboard-2/image.png', alt='')
+              .col-xl-4.col-md-6.dash-xl-50.dash-29
+                  .card.bg-primary.get-support
+                    .card-body
+                      .support-sec-img
+                        img.img-fluid(src="../assets/images/dashboard-2/support-img.png", alt="")
+                      .support-detail
+                        h5 Get support 24 hours
+                        p Check Our new service & feature about sales!                             
+                        a.btn.btn-outline-white_color(href="product-page.html") Interested?
+              .col-xl-4.col-md-6.dash-xl-50.dash-31
+                .card.total-sale
+                  .card-header.card-no-border
+                    .media
+                      .media-body 
+                        h5.mb-0 Total sale
+                      .icon-box.onhover-dropdown
+                        i(data-feather="more-horizontal")
+                        .icon-box-show.onhover-show-div
+                          ul
+                            li
+                              a
+                                | Done
+                            li 
+                              a 
+                                | Pending
+                            li  
+                              a 
+                                | Rejected
+                            li 
+                              a
+                                | In Progress
+                    .animat-block
+                      ul
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                  .card-body.pt-0 
+                    .sale-main
+                      .sale-left
+                        h6.font-danger
+                          i.icon-arrow-down
+                          span
+                            | 0.45%
+                        h5.font-primary 680.96
+                      .sale-right
+                        #total-sales-chart
+          // Container-fluid Ends
+        include ../../components/footer 
+    include ../../components/footer-files
+    

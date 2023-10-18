@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::apiResource('user', \App\Http\Controllers\API\V1\UserController::class);
+Route::apiResource('department', \App\Http\Controllers\API\V1\DepartmentController::class);
+Route::apiResource('subject', \App\Http\Controllers\API\V1\SubjectController::class);
+Route::apiResource('book', \App\Http\Controllers\API\V1\BookController::class);
+Route::apiResource('rent_book', \App\Http\Controllers\API\V1\RentBookController::class);
+
+Route::post('login', [\App\Http\Controllers\API\V1\AuthController::class, 'loginEmail']);
+Route::get('get-book', [\App\Http\Controllers\API\V1\OrderContoller::class, 'getBook']);
