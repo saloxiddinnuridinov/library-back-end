@@ -1,5 +1,5 @@
 @extends('layouts.simple.master')
-@section('title', 'Add Book Table')
+@section('title', 'Edit Book Table')
 
 @section('css')
 @endsection
@@ -12,25 +12,17 @@
                     <div class="col-sm-12">
                         <div class="card">
                             <div class="card-header pb-0">
-                                <h5>Add Book</h5>
+                                <h5>Edit Book</h5>
                             </div>
                             <div class="card-body">
-                                <form class="form theme-form" action="{{route('book.store')}}" method="POST" enctype="multipart/form-data">
+                                <form class="form theme-form" action="{{route('book.update', ['book' => $model->id])}}" method="POST" enctype="multipart/form-data">
+                                    @method('put')
                                     @csrf
                                     <div class='mb-3 row'>
                                         <label class='col-sm-3 col-form-label'>Name</label>
                                         <div class='col-sm-9'>
-                                            <input class='form-control'  type='text' name='name' value="{{old('name')}}" placeholder='Name'>
+                                            <input class='form-control'  type='text' name='name' value='{{$model->name}}' placeholder='Name'>
                                             @error('name')
-                                            <p class='text-danger'>{{$message}}</p>
-                                            @enderror
-                                        </div>
-                                    </div>
-									<div class='mb-3 row'>
-                                        <label class='col-sm-3 col-form-label'>Image</label>
-                                        <div class='col-sm-9'>
-                                            <input class='form-control' name='image' type='file'>
-                                            @error('image')
                                             <p class='text-danger'>{{$message}}</p>
                                             @enderror
                                         </div>
@@ -38,7 +30,7 @@
 									<div class='mb-3 row'>
                                         <label class='col-sm-3 col-form-label'>Status</label>
                                         <div class='col-sm-9'>
-                                            <input class='form-control'  type='text' name='status' value="{{old('status')}}" placeholder='Status'>
+                                            <input class='form-control'  type='text' name='status' value='{{$model->status}}' placeholder='Status'>
                                             @error('status')
                                             <p class='text-danger'>{{$message}}</p>
                                             @enderror
@@ -47,26 +39,8 @@
 									<div class='mb-3 row'>
                                         <label class='col-sm-3 col-form-label'>Description</label>
                                         <div class='col-sm-9'>
-                                            <textarea id='message' name='description' rows='1' cols='111' placeholder='Description'>{{value(old('description'))}}</textarea>
+                                            <input class='form-control'  type='text' name='description' value='{{$model->description}}' placeholder='Description'>
                                             @error('description')
-                                            <p class='text-danger'>{{$message}}</p>
-                                            @enderror
-                                        </div>
-                                    </div>
-									<div class='mb-3 row'>
-                                        <label class='col-sm-3 col-form-label'>Book Count</label>
-                                        <div class='col-sm-9'>
-                                            <input class='form-control'  type='text' name='book_count' value="{{old('book_count')}}" placeholder='Book Count'>
-                                            @error('book_count')
-                                            <p class='text-danger'>{{$message}}</p>
-                                            @enderror
-                                        </div>
-                                    </div>
-									<div class='mb-3 row'>
-                                        <label class='col-sm-3 col-form-label'>Live</label>
-                                        <div class='col-sm-9'>
-                                            <input class='form-control'  type='text' name='live' value="{{old('live')}}" placeholder='Live'>
-                                            @error('live')
                                             <p class='text-danger'>{{$message}}</p>
                                             @enderror
                                         </div>

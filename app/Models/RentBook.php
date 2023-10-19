@@ -21,9 +21,9 @@ class RentBook extends Model
 	'updated_at',
     ];
 
-    public function books()
+    public function book()
     {
-        return $this->belongsTo(Book::class,'id');
+        return $this->hasOne(Book::class,'id', 'book_id');
     }
 
     public function users()

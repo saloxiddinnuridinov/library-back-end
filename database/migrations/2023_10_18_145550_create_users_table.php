@@ -20,7 +20,7 @@ return new class extends Migration
 			$table->string('email');
 			$table->string('password');
 			$table->string('image')->nullable();
-			$table->string('qr_code')->nullable();
+			$table->longText('qr_code')->nullable();
 			$table->string('group')->nullable();
 			$table->enum('role', ['student', 'admin'])->default('student');
 			$table->timestamp('created_at')->nullable();

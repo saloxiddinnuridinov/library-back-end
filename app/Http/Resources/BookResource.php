@@ -19,8 +19,8 @@ class BookResource extends JsonResource
 			'name' => $this->name,
 			'status' => $this->status,
 			'description' => $this->description,
-			'created_at' => date('Y-m-d H:i:s', strtotime($this->created_at)),
-			'updated_at' => date('Y-m-d H:i:s', strtotime($this->updated_at))
+			'created_at' => date('Y-m-d', strtotime($this->created_at)),
+			'updated_at' => date('Y-m-d', strtotime($this->updated_at))
         ];
     }
 }

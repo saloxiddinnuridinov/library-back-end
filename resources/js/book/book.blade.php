@@ -1,4 +1,4 @@
-@extends('layouts.simple.master')
+@extends('views.layouts.simple.master')
 @section('title', 'Programmer UZ')
 
 
@@ -12,7 +12,7 @@
 @section('breadcrumb-items')
     <div class="py-3">
         <div class="justify-content-between row mx-2">
-            <a  href="{{route('book.create')}}" class="btn btn-success font-weight-bold"><i class="fa fa-plus"></i></a>
+            <a href="{{route('book.create')}}" class="btn btn-success font-weight-bold"><i class="fa fa-plus"></i></a>
         </div>
     </div>
 @endsection
@@ -35,32 +35,30 @@
                             <thead>
                             <tr>
                                 <th scope="col">#</th>
-								<th scope='col'>Name</th>
-								<th scope='col'>Image</th>
-								<th scope='col'>Status</th>
-								<th scope='col'>Description</th>
-								<th scope='col'>Book Count</th>
-								<th scope='col'>Live</th>
-								<th scope="col">Action</th>
+                                <th scope='col'>Name</th>
+                                <th scope='col'>Status</th>
+                                <th scope='col'>Description</th>
+                                <th scope='col'>Created At</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($models as $model)
-                            <tr>
-                                <td>{{$model->id}}</td>
-								<td>{{$model->name}}</td>
-								<td><img src='{{$model->image}}' width='100' alt=''></td>
-								<td>{{$model->status}}</td>
-								<td>{{$model->description}}</td>
-								<td>{{$model->book_count}}</td>
-								<td>{{$model->live}}</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <a href="{{route('book.edit', ['book' => $model->id])}}" class="btn btn-info"><i class="fa fa-edit"></i></a>
-                                        <a href="{{route('book.show', ['book' => $model->id])}}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>{{$model->id}}</td>
+                                    <td>{{$model->name}}</td>
+                                    <td>{{$model->status}}</td>
+                                    <td>{{$model->description}}</td>
+                                    <td>{{$model->created_at}}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="{{route('book.edit', ['book' => $model->id])}}"
+                                               class="btn btn-info"><i class="fa fa-edit"></i></a>
+                                            <a href="{{route('book.show', ['book' => $model->id])}}"
+                                               class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
                             @endforeach
                             </tbody>
                         </table>

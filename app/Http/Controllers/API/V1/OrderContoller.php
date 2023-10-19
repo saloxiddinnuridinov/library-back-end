@@ -9,7 +9,10 @@ use App\Http\Resources\API\V1\BookShowOrderResource;
 use App\Http\Resources\BookResource;
 use App\Models\Book;
 use App\Models\RentBook;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 /**
  * @OA\Schema(
@@ -55,7 +58,7 @@ class OrderContoller extends Controller
      */
     public function getBook()
     {
-        $bookS = Book::all();
+        $bookS = Book::orderByDesc('id')->get();
         return response()->json([
             'data' => BookOrderResource::collection($bookS),
         ]);
@@ -158,5 +161,39 @@ class OrderContoller extends Controller
             'code' => 200
         ]);
     }
+
+    /**
+     * @OA\Post(
+     *      path="/api/v1/qr-code",
+     *      security={{"api":{}}},
+     *      description="Add a new Subject",
+     *      tags={"Student API"},
+     *      @OA\RequestBody(required=true, description="Subject save",
+     *           @OA\MediaType(mediaType="multipart/form-data",
+     *              @OA\Schema(type="object", required={},
+     *
+     *              )
+     *          )
+     *      ),
+     *       @OA\Response(response=200,description="Successful operation",
+     *           @OA\JsonContent(ref="#/components/schemas/Subject"),
+     *      ),
+     *       @OA\Response(response=404,description="Not found",
+     *          @OA\JsonContent(ref="#/components/schemas/Error"),
+     *      ),
+     * )
+     */
+    public function qrCode()
+    {
+        $ID = auth('api')->user()->id;
+        $user = User::where('id', $ID)->first();
+        if ($user) {
+
+        }
+        return $user;
+    }
+
+
+
 
 }

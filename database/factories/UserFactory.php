@@ -14,13 +14,13 @@ class UserFactory extends Factory
     {
         return [
 
-			'name' => $this->faker->word,
-			'surname' => $this->faker->word,
+			'name' => $this->faker->lastName,
+			'surname' => $this->faker->firstName,
 			'email' => $this->faker->email,
 			'password' => Hash::make('admin123'),
-			'image' => $this->faker->word,
+			'image' => 'https://photogov-com.akamaized.net/examples/original/DE.webp',
 			'qr_code' => $this->faker->word,
-			'group' => $this->faker->word,
+			'group' => 'AX-20-07',
 			'role' => 'student',
 
         ];

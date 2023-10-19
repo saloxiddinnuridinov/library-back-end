@@ -71,6 +71,15 @@
                 </div>
             </div>
         </div>
+        <div class='col-3 p-3'>
+            <div class='card'>
+                <div class='card-body'>
+                    <a href="{{route('book.index')}}">
+                        <h4>Book</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
         <!-- ADD_ITEM -->
 @endsection
 @section('script')

@@ -1430,6 +1430,54 @@
                 ]
             }
         },
+        "/api/v1/qr-code": {
+            "post": {
+                "tags": [
+                    "Student API"
+                ],
+                "description": "Add a new Subject",
+                "operationId": "0a3c07a7be8541b854e73f2a604e4a2a",
+                "requestBody": {
+                    "description": "Subject save",
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [],
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Subject"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "api": []
+                    }
+                ]
+            }
+        },
         "/api/v1/rent_book": {
             "get": {
                 "tags": [

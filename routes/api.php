@@ -28,8 +28,9 @@ Route::get('get-book', [\App\Http\Controllers\API\V1\OrderContoller::class, 'get
 Route::get('get-book/{id}', [\App\Http\Controllers\API\V1\OrderContoller::class, 'show']);
 Route::get('read-book', [\App\Http\Controllers\API\V1\OrderContoller::class, 'readBook']);
 Route::get('existing-book', [\App\Http\Controllers\API\V1\OrderContoller::class, 'existingBook']);
-
+Route::post('qr-code', [\App\Http\Controllers\API\V1\OrderContoller::class, 'qrCode']);
 
 
 Route::get('get-student', [\App\Http\Controllers\API\V1\Admin\StudentController::class, 'index']);
+Route::post('scanner', [\App\Http\Controllers\API\V1\Admin\ScannerController::class, 'check']);
 

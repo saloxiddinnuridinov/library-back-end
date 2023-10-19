@@ -16,9 +16,9 @@ class BookReadResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'book' => $this->books,
+            'book' => $this->book,
             'is_taken' => boolval($this->is_taken),
-            'created' => date('Y-m-d H:i:s', strtotime($this->created_at)),
+            'created' => date('Y-m-d', strtotime($this->created_at)),
         ];
     }
 }

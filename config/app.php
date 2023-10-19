@@ -183,6 +183,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Programmeruz\LaravelCreator\LaravelCreatorServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
         /*
          * Package Service Providers...

@@ -20,6 +20,8 @@ class BookOrderResource extends JsonResource
             'name' => $this->name,
             'status' => $this->status,
             'description' => $this->description,
+            'count' => $this->book_count,
+            'live' => $this->live,
         ];
     }
 }

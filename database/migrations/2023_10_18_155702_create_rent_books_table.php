@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
 			$table->unsignedBigInteger('user_id');
 			$table->unsignedBigInteger('book_id');
+            $table->dateTime('star_time')->default(now());
+            $table->dateTime('end_time')->default(now()->addWeek());
 			$table->boolean('is_taken')->default(0);
 			$table->timestamp('created_at')->nullable();
 			$table->timestamp('updated_at')->nullable();
